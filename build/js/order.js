@@ -16,13 +16,13 @@ window.addEventListener('load', () => {
         }
     })
 
-    const orderItems = document.querySelectorAll('.order-products .product-item')
+    const orderItems = document.querySelectorAll('.order-products .product-item-cart')
     const finalOrderSum = document.querySelectorAll('.final-order-sum span')
     orderItems.forEach(elem => {
         elem.querySelector('.plus').addEventListener('click', () => {
             let count = +elem.querySelector('.current').textContent + 1
-            let priceItem = +elem.querySelector('.product-item-price span').textContent
-            let finalPriceItem = elem.querySelector('.product-item-final-price span')
+            let priceItem = +elem.querySelector('.product-item-cart-price span').textContent
+            let finalPriceItem = elem.querySelector('.product-item-cart-final-price span')
             elem.querySelector('.current').textContent = count
             finalPriceItem.textContent = count * priceItem
             countFinalSum()
@@ -32,21 +32,21 @@ window.addEventListener('load', () => {
             if(count < 0){
                 count = 0
             }
-            let priceItem = +elem.querySelector('.product-item-price span').textContent
-            let finalPriceItem = elem.querySelector('.product-item-final-price span')
+            let priceItem = +elem.querySelector('.product-item-cart-price span').textContent
+            let finalPriceItem = elem.querySelector('.product-item-cart-final-price span')
             elem.querySelector('.current').textContent = count
             finalPriceItem.textContent = count * priceItem
             countFinalSum()
         })
-        elem.querySelector('.product-item-remove').addEventListener('click', () => {
+        elem.querySelector('.product-item-cart-remove').addEventListener('click', () => {
             elem.remove()
             countFinalSum()
         })
     })
     function countFinalSum(){
         let count = 0;
-        document.querySelectorAll('.order-products .product-item').forEach(elem => {
-            count += +elem.querySelector('.product-item-final-price span').textContent
+        document.querySelectorAll('.order-products .product-item-cart').forEach(elem => {
+            count += +elem.querySelector('.product-item-cart-final-price span').textContent
         })
         finalOrderSum.forEach(elem => {
             elem.textContent = count

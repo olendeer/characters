@@ -686,7 +686,7 @@ footer.footer .footer-content-bottom {
   margin-bottom: 54px;
 }
 
-.order-content .order-content-body .order-products .product-item {
+.order-content .order-content-body .order-products .product-item-cart {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -701,7 +701,7 @@ footer.footer .footer-content-bottom {
   border-bottom: 1px solid #fed233;
 }
 
-.order-content .order-content-body .order-products .product-item-info {
+.order-content .order-content-body .order-products .product-item-cart-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -710,25 +710,25 @@ footer.footer .footer-content-bottom {
           align-items: center;
 }
 
-.order-content .order-content-body .order-products .product-item-info img {
+.order-content .order-content-body .order-products .product-item-cart-info img {
   width: 111px;
   height: 111px;
   margin-right: 21px;
 }
 
-.order-content .order-content-body .order-products .product-item-info-name {
+.order-content .order-content-body .order-products .product-item-cart-info-name {
   font-size: 0.8rem;
   font-weight: 400;
   color: #171210;
 }
 
-.order-content .order-content-body .order-products .product-item-counter {
+.order-content .order-content-body .order-products .product-item-cart-counter {
   display: grid;
   grid-template-columns: 35px 20px;
   grid-template-rows: 16px 16px;
 }
 
-.order-content .order-content-body .order-products .product-item-counter .current {
+.order-content .order-content-body .order-products .product-item-cart-counter .current {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 1;
@@ -748,7 +748,7 @@ footer.footer .footer-content-bottom {
   color: #f59fc2;
 }
 
-.order-content .order-content-body .order-products .product-item-counter .plus, .order-content .order-content-body .order-products .product-item-counter .minus {
+.order-content .order-content-body .order-products .product-item-cart-counter .plus, .order-content .order-content-body .order-products .product-item-cart-counter .minus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -769,18 +769,18 @@ footer.footer .footer-content-bottom {
           user-select: none;
 }
 
-.order-content .order-content-body .order-products .product-item-price, .order-content .order-content-body .order-products .product-item-final-price {
+.order-content .order-content-body .order-products .product-item-cart-price, .order-content .order-content-body .order-products .product-item-cart-final-price {
   font-size: 0.6rem;
   line-height: 0.85rem;
   font-weight: 700;
   color: #171210;
 }
 
-.order-content .order-content-body .order-products .product-item-final-price {
+.order-content .order-content-body .order-products .product-item-cart-final-price {
   min-width: 60px;
 }
 
-.order-content .order-content-body .order-products .product-item-remove {
+.order-content .order-content-body .order-products .product-item-cart-remove {
   width: 10px;
   height: 10px;
   display: -webkit-box;
@@ -795,12 +795,12 @@ footer.footer .footer-content-bottom {
   cursor: pointer;
 }
 
-.order-content .order-content-body .order-products .product-item-remove img {
+.order-content .order-content-body .order-products .product-item-cart-remove img {
   width: 100%;
   height: 100%;
 }
 
-.order-content .order-content-body .order-products .product-item:first-child {
+.order-content .order-content-body .order-products .product-item-cart:first-child {
   border-top: 1px solid #fed233;
 }
 
@@ -914,6 +914,9 @@ footer.footer .footer-content-bottom {
 .order-content .order-content-body .order-information .general-info .general-order-type .order-type-active {
   color: #fff;
   background-color: #f59fc2;
+  background-image: url("../img/bg_btn.png");
+  background-size: cover;
+  border: 2px solid transparent;
 }
 
 .order-content .order-content-body .order-information .general-info .general-order-type .order-type:last-child {
@@ -1328,7 +1331,8 @@ footer.footer .footer-content-bottom {
 }
 
 .product-item .item-price-wrapper .cart {
-  background-color: #f59fc2;
+  background-image: url("../img/bg_btn.png");
+  background-size: contain;
   opacity: .3;
   width: 82px;
   height: 26px;
@@ -1458,6 +1462,7 @@ footer.footer .footer-content-bottom {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #f59fc2;
+  background-image: url("../img/bg_btn2.png");
   color: #fff;
   font-size: 0.8rem;
   font-weight: 700;
