@@ -1516,7 +1516,7 @@ footer.footer .footer-content-bottom {
   overflow: visible;
 }
 
-.content-dishes .dishes-wrapper .dishes-slider-item {
+.product-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1530,15 +1530,16 @@ footer.footer .footer-content-bottom {
   width: 263px;
   margin-right: 29px;
   outline: none;
+  cursor: pointer;
 }
 
-.content-dishes .dishes-wrapper .dishes-slider-item img {
+.product-item img {
   margin-bottom: 25px;
   width: 265px;
   height: 415px;
 }
 
-.content-dishes .dishes-wrapper .dishes-slider-item .item-name {
+.product-item .item-name {
   font-size: 0.9rem;
   line-height: 1.2rem;
   font-weight: 700;
@@ -1546,14 +1547,14 @@ footer.footer .footer-content-bottom {
   color: #171210;
 }
 
-.content-dishes .dishes-wrapper .dishes-slider-item .item-info {
+.product-item .item-info {
   font-size: 0.6rem;
   line-height: 1.2rem;
   margin-bottom: 33px;
   color: #171210;
 }
 
-.content-dishes .dishes-wrapper .dishes-slider-item .item-price-wrapper {
+.product-item .item-price-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1566,19 +1567,19 @@ footer.footer .footer-content-bottom {
   width: 100%;
 }
 
-.content-dishes .dishes-wrapper .dishes-slider-item .item-price-wrapper .price {
+.product-item .item-price-wrapper .price {
   font-size: 0.6rem;
   font-weight: 400;
   color: #171210;
 }
 
-.content-dishes .dishes-wrapper .dishes-slider-item .item-price-wrapper .price span {
+.product-item .item-price-wrapper .price span {
   font-size: 0.9rem;
   line-height: 1.2rem;
   font-weight: 700;
 }
 
-.content-dishes .dishes-wrapper .dishes-slider-item .item-price-wrapper .cart {
+.product-item .item-price-wrapper .cart {
   background-color: #f59fc2;
   opacity: .3;
   width: 82px;
@@ -1600,7 +1601,7 @@ footer.footer .footer-content-bottom {
           transition-duration: .2s;
 }
 
-.content-dishes .dishes-wrapper .dishes-slider-item .item-price-wrapper .cart:hover {
+.product-item .item-price-wrapper .cart:hover {
   opacity: .6;
 }
 
