@@ -1545,6 +1545,9 @@ footer.footer .footer-content-bottom {
   .content-contacts {
     margin-bottom: 121px;
   }
+  .content-contacts .contacts {
+    width: 100%;
+  }
   .content-contacts .contacts .contacts-item span {
     font-size: 0.7rem;
     line-height: 1rem;
@@ -1592,14 +1595,15 @@ footer.footer .footer-content-bottom {
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    width: 100%;
   }
   .content-contacts .contacts .contacts-item {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -ms-flex-preferred-size: 40%;
-        flex-basis: 40%;
+    -ms-flex-preferred-size: 60%;
+        flex-basis: 60%;
   }
   .content-contacts .contacts .contacts-item span {
     font-size: 0.7rem;
@@ -1617,6 +1621,10 @@ footer.footer .footer-content-bottom {
   }
   .content-contacts .contacts .contacts-item:not(:last-child) {
     margin-bottom: 30px;
+  }
+  .content-contacts .contacts .contacts-item:first-child {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
   }
   .content-contacts .contacts .contacts-item:last-child {
     display: none;
@@ -2011,4 +2019,71 @@ footer.footer .footer-content-bottom {
   font-weight: 700;
   font-size: 0.8rem;
   background-color: #fed233;
+}
+
+@media screen and (max-width: 1280px) {
+  .question {
+    width: calc(100vw - 140px) !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .content-header {
+    font-size: 1.4rem;
+    margin-bottom: 63px;
+  }
+  .content-title {
+    font-size: 1.2rem;
+    margin-bottom: 63px;
+  }
+  .question {
+    height: 124px;
+    margin-bottom: 62px;
+    padding: 0px 40px;
+    width: calc(100vw - 110px) !important;
+  }
+  .question .illust {
+    display: none;
+  }
+  .question input {
+    height: 44px;
+    padding: 0px 17px;
+    font-size: 0.55rem;
+    margin-right: 23px;
+  }
+  .question button {
+    height: 44px;
+    width: 170px;
+    min-width: 170px;
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .question {
+    width: calc(100vw - 64px) !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .content-title {
+    font-size: 1rem;
+  }
+  .question {
+    width: calc(100vw - 60px) !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 268px;
+    padding: 40px;
+  }
+  .question input {
+    margin-right: 0px;
+    font-size: 0.8rem;
+  }
+  .question button {
+    width: 100%;
+    font-size: 0.9rem;
+  }
 }

@@ -2212,3 +2212,48 @@ footer.footer .footer-content-bottom {
   font-weight: 700;
   color: #ffffff;
 }
+
+@media screen and (max-width: 1024px) {
+  .content-menu {
+    margin-bottom: 148px;
+  }
+  .content-menu-header {
+    font-size: 1.2rem;
+    margin-bottom: 63px;
+  }
+  .content-menu .ill1 {
+    display: none;
+  }
+  .content-menu .ill2 {
+    display: none;
+  }
+  .content-download {
+    height: 241px;
+    margin-bottom: 84px;
+    background-size: cover;
+  }
+  .content-download span {
+    font-size: 4rem;
+    text-align: center;
+    line-height: 3.6rem;
+  }
+  .content-download .download-menu {
+    bottom: -20px;
+    width: 451px;
+    height: 59px;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .content-menu {
+    margin-bottom: 60px;
+  }
+  .content-download span {
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
+  .content-download .download-menu {
+    width: calc(100vw - 28px);
+  }
+}
