@@ -574,6 +574,19 @@ header.header .header-cart-active {
   }
 }
 
+@media screen and (max-width: 390px) {
+  header.header .header-top .logo img {
+    width: 200px;
+  }
+  header.header .header-top .cart {
+    margin-left: 10px;
+    margin-top: 5px;
+  }
+  header.header .header-cart {
+    display: none;
+  }
+}
+
 footer.footer {
   height: 410px;
   width: 100%;

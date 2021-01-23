@@ -4,12 +4,48 @@ window.addEventListener('load', () => {
         slidesToScroll: 3,
         slidesToShow: 4,
         variableWidth: true,
-        infinite: false
+        infinite: false,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToScroll: 2,
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToScroll: 1,
+                    slidesToShow: 1,
+                }
+            }
+        ]
     })
     const slider = document.querySelector('.recommendation-slider .slick-list')
-    slider.style.paddingLeft = `${header.getBoundingClientRect().left}px`
-    window.addEventListener('resize', () => {
+    if(window.innerWidth > 1280){
         slider.style.paddingLeft = `${header.getBoundingClientRect().left}px`
+    } else if (window.innerWidth > 1024 && window.innerWidth < 1280) {
+        slider.style.paddingLeft = `${70}px`
+    } else if (window.innerWidth > 768 && window.innerWidth < 1024) {
+        slider.style.paddingLeft = `${55}px`
+    } else if (window.innerWidth > 480 && window.innerWidth < 768){
+        slider.style.paddingLeft = `${32}px`
+    } else if (window.innerWidth < 480){
+        slider.style.paddingLeft = `${30}px`
+    }
+    window.addEventListener('resize', () => {
+        if(window.innerWidth > 1280){
+            slider.style.paddingLeft = `${header.getBoundingClientRect().left}px`
+        } else if (window.innerWidth > 1024 && window.innerWidth < 1280) {
+            slider.style.paddingLeft = `${70}px`
+        } else if (window.innerWidth > 768 && window.innerWidth < 1024) {
+            slider.style.paddingLeft = `${55}px`
+        } else if (window.innerWidth > 480 && window.innerWidth < 768){
+            slider.style.paddingLeft = `${32}px`
+        } else if (window.innerWidth < 480){
+            slider.style.paddingLeft = `${30}px`
+        }
     })
     document.querySelector('.recommendation-body .next').addEventListener('click', () => {
         $('.recommendation-slider').slick('slickNext')
