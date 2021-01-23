@@ -1,6 +1,9 @@
 window.addEventListener('load', () => {
     let cartItems = document.querySelectorAll('.cart-content-items .item')
     const finalSum = document.querySelector('.cart-sum span')
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    window.addEventListener('resize', () => document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`))
     cartItems.forEach(elem => {
         elem.querySelector('.item-remove').addEventListener('click', () => {
             elem.remove()
